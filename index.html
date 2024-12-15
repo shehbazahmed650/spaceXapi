@@ -16,7 +16,7 @@
 </head>
 
 <body>
-    
+    <h1 class="text-center text-dark"> SpaceX Details </h1>
         <table border="1px" class="table-responsive table-bordered">
             <thead>
                 <tr>
@@ -32,7 +32,8 @@
             <tbody id="All here">
             </tbody>
         </table>
-   
+   <h3 class="text-center">Note: If any data is not Available that is not available in API. Developer has nothing to do with that. </h3>
+    <h2 class="text-center"> Thanks</h2>
 
     <script>
         fetch("https://api.spacexdata.com/v4/launches")
@@ -56,8 +57,8 @@
 
                 <td>${id} </td> 
                 <td>${name} </td>
-                <td>${flight} </td> 
-                <td>${fire} </td> 
+                <td>${flight  ? flight : "Not Available"} </td> 
+                <td>${fire ? fire : "Not Available"} </td> 
                 <td>${details ? details : "Not available in API. So cant be fetched. Its not developers fault. A fucking ternary operator is used!"} </td> 
 
                 <td>${update}  </td> 
